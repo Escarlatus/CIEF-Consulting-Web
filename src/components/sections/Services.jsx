@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, PieChart, Landmark, Briefcase, ChevronRight } from 'lucide-react';
+import { TrendingUp, PieChart, Landmark, Briefcase, ChevronRight, Target, Shield, LineChart, BookOpen } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -29,15 +29,67 @@ const Services = () => {
       ],
       icon: <PieChart size={32} strokeWidth={1.5} />,
       dark: true
+    },
+    {
+      id: '03',
+      title: 'Estrategia Corporativa',
+      description: 'Asesoría de alto nivel para redefinir el modelo de negocio y garantizar la ventaja competitiva sostenible.',
+      features: [
+        'Planificación estratégica',
+        'Optimización de procesos',
+        'Gobierno corporativo',
+        'Estrategias de entrada al mercado'
+      ],
+      icon: <Target size={32} strokeWidth={1.5} />,
+      dark: false
+    },
+    {
+      id: '04',
+      title: 'Gestión de Riesgos',
+      description: 'Identificación y mitigación proactiva de riesgos financieros, regulatorios y operativos.',
+      features: [
+        'Análisis de riesgo financiero',
+        'Cumplimiento regulatorio',
+        'Auditoría estratégica',
+        'Manejo de crisis'
+      ],
+      icon: <Shield size={32} strokeWidth={1.5} />,
+      dark: true
+    },
+    {
+      id: '05',
+      title: 'Inteligencia de Mercados',
+      description: 'Estudios de mercado detallados y análisis de datos para comprender las dinámicas del consumidor y la competencia.',
+      features: [
+        'Investigación de mercado',
+        'Análisis de demanda',
+        'Monitoreo de competencia',
+        'Estrategias de precios'
+      ],
+      icon: <LineChart size={32} strokeWidth={1.5} />,
+      dark: false
+    },
+    {
+      id: '06',
+      title: 'Políticas Públicas',
+      description: 'Evaluación y diseño de políticas e iniciativas conjuntas entre el sector público y privado.',
+      features: [
+        'Diseño de programas públicos',
+        'Alianzas público-privadas',
+        'Impacto socioeconómico',
+        'Asuntos regulatorios'
+      ],
+      icon: <BookOpen size={32} strokeWidth={1.5} />,
+      dark: true
     }
   ];
 
   return (
-    <div style={{ backgroundColor: 'var(--bg-warm)', padding: '8rem 0' }}>
+    <div id="servicios" style={{ backgroundColor: 'var(--bg-warm)', padding: '8rem 0' }}>
       <div className="container" style={{ textAlign: 'center', marginBottom: '5rem' }}>
         <span className="eyebrow">Áreas de Práctica</span>
         <h2 style={{ color: 'var(--text-primary)', marginBottom: '1rem' }}>
-          Expertise <span style={{ color: 'var(--accent-sage)', fontStyle: 'italic' }}>Especializado</span>
+          Nuestras <span style={{ color: 'var(--accent-sage)', fontStyle: 'italic' }}>Especialidades</span>
         </h2>
         <p style={{ margin: '0 auto', color: 'var(--text-secondary)', maxWidth: '600px' }}>
           Soluciones integrales diseñadas para enfrentar los desafíos más complejos del mercado dominicano e internacional.

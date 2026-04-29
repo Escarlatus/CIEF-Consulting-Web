@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Lightbulb, TrendingUp } from 'lucide-react';
+import { Target, Puzzle, Rocket } from 'lucide-react';
 
 const Process = () => {
   const steps = [
@@ -8,19 +8,19 @@ const Process = () => {
       number: '01',
       title: 'Diagnóstico Estratégico',
       description: 'Analizamos la situación actual de su empresa o institución frente al contexto macroeconómico para identificar áreas de oportunidad.',
-      icon: <Search size={24} />
+      icon: <Target size={24} />
     },
     {
       number: '02',
       title: 'Diseño de Soluciones',
       description: 'Desarrollamos modelos financieros y proyecciones económicas a la medida de sus objetivos a corto y largo plazo.',
-      icon: <Lightbulb size={24} />
+      icon: <Puzzle size={24} />
     },
     {
       number: '03',
-      title: 'Implementación & Crecimiento',
+      title: 'Implementación y Crecimiento',
       description: 'Acompañamos la ejecución de las estrategias financieras para garantizar la maximización del valor y la rentabilidad.',
-      icon: <TrendingUp size={24} />
+      icon: <Rocket size={24} />
     }
   ];
 

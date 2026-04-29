@@ -156,14 +156,14 @@ const Hero = () => {
               <div style={{ 
                 display: 'flex',
                 alignItems: 'center',
-                gap: '1rem',
+                gap: '0.75rem',
                 paddingLeft: '1.5rem',
                 borderLeft: '2px solid rgba(13,31,22,0.1)'
               }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--bg-dark)', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 700 }}>18+</span>
+                <div style={{ fontSize: '2.5rem', color: 'var(--bg-dark)', fontFamily: 'var(--font-display)', fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em' }}>
+                  18+
                 </div>
-                <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', fontWeight: 500, lineHeight: 1.3 }}>
+                <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', fontWeight: 500, lineHeight: 1.2 }}>
                   Años de<br />
                   <span style={{ color: 'var(--text-primary)', fontWeight: 700 }}>Experiencia</span>
                 </div>

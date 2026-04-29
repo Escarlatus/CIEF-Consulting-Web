@@ -77,7 +77,7 @@ const About = () => {
               
               <div>
                 <div style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', opacity: 0.6, marginBottom: '0.5rem' }}>Liderazgo</div>
-                <div style={{ fontSize: '1.5rem', fontWeight: 600, fontFamily: 'var(--font-display)' }}>Visión Experta</div>
+                <div style={{ fontSize: '1.25rem', fontWeight: 600, fontFamily: 'var(--font-display)' }}>PhD, U. de Rutgers</div>
               </div>
             </div>
           </motion.div>

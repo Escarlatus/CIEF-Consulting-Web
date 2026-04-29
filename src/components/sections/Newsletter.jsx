@@ -43,7 +43,7 @@ const Newsletter = () => {
           >
             <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>Contáctenos</span>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', marginBottom: '1.5rem', color: 'var(--text-light)', lineHeight: 1.1 }}>
-              Llevemos su visión al siguiente nivel.
+              Hablemos de su próxima decisión estratégica.
             </h2>
             <p style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.7)', marginBottom: '2.5rem', maxWidth: '480px' }}>
               Nuestro equipo de consultores está listo para analizar sus desafíos y estructurar soluciones financieras de alto impacto.
