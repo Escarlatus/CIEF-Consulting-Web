@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  /* Color Architecture (OKLCH) */
+  /* Warm off-white */
+  --bg-warm: oklch(0.96 0.01 85); 
+  /* Deep forest green */
+  --bg-dark: oklch(0.2 0.05 150); 
+  
+  /* Primary Text (very dark green) */
+  --text-primary: oklch(0.25 0.04 150); 
+  /* Secondary Text (medium green) */
+  --text-secondary: oklch(0.45 0.06 150);
+  /* Light text on dark bg */
+  --text-light: oklch(0.96 0.01 85);
+
+  /* Accents */
+  /* Sage Green */
+  --accent-sage: oklch(0.55 0.08 150);
+  /* Premium Gold */
+  --accent-gold: oklch(0.75 0.12 75);
+  /* Lighter Gold for hover */
+  --accent-gold-light: oklch(0.8 0.12 75);
+  
+  /* Surfaces */
+  /* Warm Beige */
+  --surface: oklch(0.93 0.02 85);
+  /* Dark Surface */
+  --surface-dark: oklch(0.25 0.04 150);
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  /* Layout */
+  --container-max: 1200px;
+  --spacing-base: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-warm);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 65ch;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Common Classes */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.eyebrow {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-sage);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* Button Variants */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: var(--bg-dark); /* Dark text for contrast */
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(200, 169, 110, 0.5);
+  background-color: var(--accent-gold-light); /* Lighter gold */
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-warm);
+}
+
+.btn-light {
+  background-color: transparent;
+  border-color: var(--bg-warm);
+  color: var(--bg-warm);
+}
+
+.btn-light:hover {
+  background-color: var(--bg-warm);
+  color: var(--bg-dark);
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.dark-section {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* Animation utilities for scroll-driven animations if not using Framer Motion everywhere */
+.reveal {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Layout utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
