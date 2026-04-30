@@ -54,7 +54,7 @@ const Navbar = () => {
                 alt="CIEF Consulting Logo" 
                 style={{ height: 'clamp(40px, 8vw, 72px)', cursor: 'pointer', transformOrigin: 'left center' }} 
                 onClick={(e) => scrollTo(e, '#inicio')}
-                transition={{ type: "spring", stiffness: 70, damping: 16, mass: 1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
               />
           )}
         </AnimatePresence>
@@ -100,7 +100,7 @@ const Navbar = () => {
           <motion.div 
             initial={false}
             animate={{ width: isScrolled ? 160 : 0, opacity: isScrolled ? 1 : 0 }}
-            transition={{ type: "spring", stiffness: 70, damping: 16, mass: 1 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
             style={{ display: 'flex', alignItems: 'center', overflow: 'hidden' }}
           >
             {isScrolled && (
@@ -110,7 +110,7 @@ const Navbar = () => {
                 alt="CIEF Consulting Logo" 
                 style={{ height: '36px', cursor: 'pointer', transformOrigin: 'left center', flexShrink: 0 }} 
                 onClick={(e) => scrollTo(e, '#inicio')}
-                transition={{ type: "spring", stiffness: 70, damping: 16, mass: 1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
               />
             )}
           </motion.div>
