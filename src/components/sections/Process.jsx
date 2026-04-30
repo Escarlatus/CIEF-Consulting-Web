@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Puzzle, Rocket } from 'lucide-react';
+import { Search, PenTool, Rocket } from 'lucide-react';
 
 const Process = () => {
   const steps = [
@@ -8,13 +8,13 @@ const Process = () => {
       number: '01',
       title: 'Diagnóstico Estratégico',
       description: 'Analizamos la situación actual de su empresa o institución frente al contexto macroeconómico para identificar áreas de oportunidad.',
-      icon: <Target size={24} />
+      icon: <Search size={24} />
     },
     {
       number: '02',
       title: 'Diseño de Soluciones',
       description: 'Desarrollamos modelos financieros y proyecciones económicas a la medida de sus objetivos a corto y largo plazo.',
-      icon: <Puzzle size={24} />
+      icon: <PenTool size={24} />
     },
     {
       number: '03',

@@ -183,8 +183,9 @@ const Services = () => {
               <div 
                 key={service.id}
                 style={{ 
-                  // Exact width calculation so that `cardsToShow` items + gaps fit perfectly in 100% container width
-                  flex: `0 0 calc((100% - ${(cardsToShow - 1)} * 2rem) / ${cardsToShow})`
+                  flex: `0 0 calc((100% - ${(cardsToShow - 1)} * 2rem) / ${cardsToShow})`,
+                  display: 'flex',
+                  flexDirection: 'column'
                 }}
               >
                 <div
@@ -199,7 +200,7 @@ const Services = () => {
                     boxShadow: service.dark ? '0 25px 50px -12px rgba(13,31,22,0.25)' : 'none',
                     display: 'flex',
                     flexDirection: 'column',
-                    height: '100%'
+                    flex: 1
                   }}
                 >
                   {/* Decorative Background Element */}
